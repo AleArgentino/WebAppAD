@@ -30,31 +30,31 @@ wordcloud = WordCloud(stopwords=stopwords,
                       background_color="white",
                       width=1280, height=720).generate(all_summary)
 
-def add_bg_from_local(image_file):
-    with open(image_file, "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read())
-    st.markdown(
-    f"""
-    <style>
-    .stApp {{
-        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
-        background-size: cover
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-    )
-add_bg_from_local('FabLabBackground.PNG')  
+#def add_bg_from_local(image_file):
+    #with open(image_file, "rb") as image_file:
+        #encoded_string = base64.b64encode(image_file.read())
+    #st.markdown(
+    #f"""
+    #<style>
+    #.stApp {{
+        #background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+        #background-size: cover
+    #}}
+    #</style>
+    #""",
+    #unsafe_allow_html=True
+    #)
+#add_bg_from_local('FabLabBackground.PNG')  
 
-col1, col2, col3 = st.columns((1, 1, 1))
-with col1:
-    st.image('LOGO - FabLLab.JPG', width=150, output_format='auto')
-with col2: 
-    st.write(" ") 
-with col3: 
+#col1, col2, col3 = st.columns((1, 1, 1))
+#with col1:
+    #st.image('LOGO - FabLLab.JPG', width=150, output_format='auto')
+#with col2: 
+    #st.write(" ") 
+#with col3: 
     #st.subheader("Como está sendo a sua experiência no FabLab?")
-    SUB_TITULO1 = '<p style="font-family:tahoma; color:black; font-size: 28px;">Como está sendo a sua experiência no FabLab?</p>'
-    st.markdown(SUB_TITULO1, unsafe_allow_html=True)
+    #SUB_TITULO1 = '<p style="font-family:tahoma; color:black; font-size: 28px;">Como está sendo a sua experiência no FabLab?</p>'
+    #st.markdown(SUB_TITULO1, unsafe_allow_html=True)
   
 # mostrar a imagem final
 #fig, ax = plt.subplots(figsize=(10,6))
