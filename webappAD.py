@@ -57,6 +57,30 @@ wordcloud = WordCloud(stopwords=stopwords,
     #SUB_TITULO1 = '<p style="font-family:tahoma; color:black; font-size: 28px;">Como está sendo a sua experiência no FabLab?</p>'
     #st.markdown(SUB_TITULO1, unsafe_allow_html=True)
 
+st.header("Gráfico de Pizza:")
+fig, ax = plt.subplots(figsize=(6, 3), subplot_kw=dict(aspect="equal"))
+
+labels = 'Críticas', 'Sugestões', 'Elogios'
+data = [nCritica, nSugestao, nElogio]
+explode = (0, 0.1, 0)  # only "explode" the 1st slice
+
+def func(pct, allvals):
+    absolute = int(np.round(pct/100.*np.sum(allvals)))
+    return f"{pct:.1f}%\n({absolute:d} respostas)"
+
+wedges, texts, autotexts = ax.pie(data, explode = explode, autopct=lambda pct: func(pct, data),
+                                  textprops=dict(color="w"))
+
+ax.legend(wedges, labels,
+          title="Opiniões",
+          loc="center left",
+          bbox_to_anchor=(1, 0, 0.5, 1))
+
+plt.setp(autotexts, size=8, weight="bold")
+
+ax.set_title("Percentual de Opiniões")
+
+plt.show()
 
 st.header("Nuvem de palavras:")
 # mostrar a imagem final
