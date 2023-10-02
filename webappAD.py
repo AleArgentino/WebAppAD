@@ -8,6 +8,7 @@ import altair as alt
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import base64
+import numpy as np
 
 st.title("Gráficos Phyton+Streamlit")
 st.header("Tabela Inicial:")
@@ -55,7 +56,9 @@ wordcloud = WordCloud(stopwords=stopwords,
     #st.subheader("Como está sendo a sua experiência no FabLab?")
     #SUB_TITULO1 = '<p style="font-family:tahoma; color:black; font-size: 28px;">Como está sendo a sua experiência no FabLab?</p>'
     #st.markdown(SUB_TITULO1, unsafe_allow_html=True)
-  
+
+
+st.header("Nuvem de palavras:")
 # mostrar a imagem final
 #fig, ax = plt.subplots(figsize=(10,6))
 #ax.imshow(wordcloud, interpolation='bilinear')
