@@ -9,6 +9,9 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import base64
 
+st.title("Gráficos Phyton+Streamlit")
+st.header("Tabela Inicial:")
+
 #DB
 rD = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vToXjLeT4rFKXxS3g8xu-EYwfOZU-9HBNuH9UqudfBtx2LX-pOCYzKlZkFwYAO4AJInYPtlXmAyMqA0/pub?gid=1281694547&single=true&output=csv')
 dataD = rD.content
