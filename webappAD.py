@@ -67,10 +67,10 @@ plt.show()
 #st.pyplot()
 wordcloud.to_file("NuvemPalavras.png")
 
-st.pyplot() #Este método faz exibirt a nuvem de palavras
+st.pyplot() #Este método faz exibir a nuvem de palavras
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.info(" Desenvolvido em Linguagem Python | Equipe FabLab/Programador: prof. Massaki de O. Igarashi")
+st.info(" Desenvolvido em Linguagem Python | Programador: Alexandre M. Argentino e Nicholas C. Tonhi")
 
 SUB_TITULO = '<p style="font-family:tahoma; color:white; font-size: 14px;">CC BY-NC-SA - Esta licença permite que outros alterem, adaptem e criem a partir desta publicação para fins não comerciais, desde que atribuam aos criadores o devido crédito e que licenciem as novas criações sob termos idênticos.</p>'
 st.markdown(SUB_TITULO, unsafe_allow_html=True)
