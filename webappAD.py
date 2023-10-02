@@ -13,7 +13,7 @@ import base64
 rD = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vToXjLeT4rFKXxS3g8xu-EYwfOZU-9HBNuH9UqudfBtx2LX-pOCYzKlZkFwYAO4AJInYPtlXmAyMqA0/pub?gid=1281694547&single=true&output=csv')
 dataD = rD.content
 dfD = pd.read_csv(BytesIO(dataD), index_col=0)
-dfD.columns = ['opiniao', 'resumo', 'idade']
+dfD.columns = ['Idade', 'Opinião', 'Resumo']
 st.dataframe(dfD) 
 # eliminar as colunas com valores ausentes
 summary = dfD.dropna(subset=['resumo'], axis=0)['resumo']
