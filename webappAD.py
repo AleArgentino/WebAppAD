@@ -16,7 +16,7 @@ dfD = pd.read_csv(BytesIO(dataD), index_col=0)
 dfD.columns = ['Idade', 'Opinião', 'Resumo']
 st.dataframe(dfD) 
 # eliminar as colunas com valores ausentes
-summary = dfD.dropna(subset=['resumo'], axis=0)['resumo']
+summary = dfD.dropna(subset=['Resumo'], axis=0)['Resumo']
 # concatenar as palavras
 all_summary = " ".join(s for s in summary)
 # lista de stopword
