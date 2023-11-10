@@ -58,7 +58,7 @@ wordcloud = WordCloud(stopwords=stopwords,
     #st.markdown(SUB_TITULO1, unsafe_allow_html=True)
 
 st.header("Gráfico de Pizza:")
-fig, ax = plt.subplots(figsize=(6, 3), subplot_kw=dict(aspect="equal"))
+fig, ax = st.plt.subplots(figsize=(6, 3), subplot_kw=dict(aspect="equal"))
 
 labels = 'Críticas', 'Sugestões', 'Elogios'
 data = [nCritica, nSugestao, nElogio]
@@ -76,7 +76,7 @@ ax.legend(wedges, labels,
           loc="center left",
           bbox_to_anchor=(1, 0, 0.5, 1))
 
-plt.setp(autotexts, size=8, weight="bold")
+st.plt.setp(autotexts, size=8, weight="bold")
 
 ax.set_title("Percentual de Opiniões")
 
